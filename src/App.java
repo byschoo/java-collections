@@ -1,12 +1,12 @@
-import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        Set<String> superheroes = new HashSet<>(); //No hay garantía de orden, ni se pueden duplicar elementos
+        Set<String> superheroes = new TreeSet<>(); //Ordena alfabéticamente, ni se pueden duplicar elementos
 
         superheroes.add("Superman".toUpperCase());
         superheroes.add("Wonderwoman".toUpperCase());
