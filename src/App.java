@@ -1,12 +1,12 @@
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        Set<String> superheroes = new TreeSet<>(); //Ordena alfabéticamente, ni se pueden duplicar elementos
+        Set<String> superheroes = new LinkedHashSet<>(); //Ordena de acuerdo a como fue insertado, ni se pueden duplicar elementos
 
         superheroes.add("Superman".toUpperCase());
         superheroes.add("Wonderwoman".toUpperCase());
@@ -26,15 +26,14 @@ public class App {
         
         while (centinela.equals("Y")) {
             System.out.println("Quién se va: ");
-            String seRetiran = scanner.nextLine();
-            
-            superheroes.remove(seRetiran.toUpperCase());
+            String seRetiran = scanner.nextLine().toUpperCase();
 
-            if (!superheroes.contains(seRetiran)) {
-                System.out.print("Ya se fue " + seRetiran.toUpperCase() + " de la fiesta.\n");
-                
-            }
-
+                if (superheroes.contains(seRetiran)) {
+                    superheroes.remove(seRetiran.toUpperCase());
+                    System.out.print("Ya se fue " + seRetiran.toUpperCase() + " de la fiesta.\n");
+                }else {
+                    System.out.print(seRetiran + " no ha estado en la fiesta.\n");
+                }
 
             System.out.print("\nHay otro superhéroe que se va de la fiesta (Y/N): ");
             centinela = scanner.nextLine().toUpperCase();
