@@ -9,8 +9,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Set<Persona> cjsp = new HashSet<Persona>(); // Objeto Conjunto Set
-        SortedSet<Persona> cjssp = new TreeSet<Persona>(); // Objeto Conjunto SortedSet, no duplica extricto
+        Set<Persona> cjsp = new HashSet<Persona>(); // Objeto Conjunto Set - HashSet, No garantiza orden
+        SortedSet<Persona> cjssp = new TreeSet<Persona>(); // Objeto Conjunto SortedSet - TreeSet, no duplica extricto, ordenado
 
         Persona p = new Persona(1, "Marta", 165);
         cjsp.add(p);

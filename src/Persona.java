@@ -12,8 +12,9 @@ public class Persona implements Comparable<Persona>{
     public String toString() { return "Persona-> ID: "+idPersona+" Nombre: "+nombre+" Altura: "+altura+"\n";  }
 
     @Override
-    public int compareTo(Persona o) { return this.altura-o.altura; }
-    // public int compareTo(Persona o) { return this.idPersona-o.idPersona; }
+    public int compareTo(Persona o) { return this.altura - o.altura; } //Devuelve un entero positivo si la altura es mayor que la o.altura
+    // public int compareTo(Persona o) { return this.idPersona - o.idPersona; }
+    // public int compareTo(Persona o) { return this.nombre.compareTo(nombre);} // Ordena solo la tabla HashSet por el nombre, no el arbol
 
     // Hash es una sucesión alfanumérica de longitud fija, que identifica o representa a un conjunto de datos determinados
     // El método hashCode() de Java Object es un método nativo que devuelve el valor del código hash entero del objeto
