@@ -1,32 +1,19 @@
-
-/* Ejemplo Interface Set y SortedSet, clase HashSet y TreeSet aprenderaprogramar.com */
-import java.util.HashSet;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.Collections; 
 
 public class Main {
 
-    public static void main(String[] args) {
+  public static void main(String arg[]) {
 
-        Set<Persona> cjsp = new HashSet<Persona>(); // Objeto Conjunto Set - HashSet, No garantiza orden
-        SortedSet<Persona> cjssp = new TreeSet<Persona>(); // Objeto Conjunto SortedSet - TreeSet, no duplica extricto, ordenado
+    ArrayList<Persona> listaPersonas = new ArrayList<>();
 
-        Persona p = new Persona(1, "Marta", 165);
-        cjsp.add(p);
-        cjssp.add(p);
-        
-        // p = new Persona(1, "Marta", 165);
-        p = new Persona(2, "Elena", 155);
-        cjsp.add(p);
-        cjssp.add(p);
+    listaPersonas.add(new Persona(1,"Maria",185));
+    listaPersonas.add(new Persona(2,"Carla",190));
+    listaPersonas.add(new Persona(3,"Yovana",170));
 
-        p = new Persona(3, "María", 170);
-        cjsp.add(p);
-        cjssp.add(p);
+    // Collections.sort(listaPersonas);  // Ejemplo uso ordenación natural
+    Collections.sort(listaPersonas, new OrdenarPersonaPorAltura()); // Ejemplo uso ordenación total, altura
 
-        System.out.println("Personas en el conjunto SET - HashSet: " + cjsp);
-        System.out.println("Personas en el conjunto ordenado SortedSet - TreeSet: " + cjssp);
-    }
-
+    System.out.println("Personas Ordenadas por orden: "+listaPersonas);
+  }
 }
