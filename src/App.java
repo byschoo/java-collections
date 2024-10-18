@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+import java.util.Vector;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class App {
 
         // Lista doblemente enlazada, Acceso más lento a los elementos. Más rápido inserciones y
         // eliminaciones en medio de la lista debido a la estructura de lista enlazada. Usa más memoria.
-        List<String> superheroes = new LinkedList<>();
+        List<String> superheroes = new Vector<>();
 
         superheroes.add("Superman".toUpperCase());
         superheroes.add("Wonderwoman".toUpperCase());
