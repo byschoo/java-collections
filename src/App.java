@@ -1,11 +1,11 @@
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        Map<String, Double> inventarioHash = new LinkedHashMap<>(); //No hay orden.
+        Map<String, Double> inventarioHash = new TreeMap<>(); //No hay orden.
 
         System.out.println("Bienvenido a la Frutería del Abuelo");
 
