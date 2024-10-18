@@ -5,7 +5,7 @@ import java.util.TreeMap;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        Map<String, Double> inventarioHash = new TreeMap<>(); //No hay orden.
+        Map<String, Double> inventarioHash = new TreeMap<>(); //Las entradas están ordenadas según las claves. Natural o usando un comparador personalizado.
 
         System.out.println("Bienvenido a la Frutería del Abuelo");
 
