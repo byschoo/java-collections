@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        Map<String, Double> inventarioHash = new HashMap<>(); //No hay orden.
+        Map<String, Double> inventarioHash = new HashMap<>(); //No hay garantía de orden.
 
         System.out.println("Bienvenido a la Frutería del Abuelo");
 
